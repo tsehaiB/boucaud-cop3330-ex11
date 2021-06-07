@@ -21,11 +21,6 @@ public class App {
         return inp.nextDouble();
     }
     private double calcUSD(int euros, double rate){
-        double usd = euros * rate;
-        //To round up to the next penny, so that 111.383 becomes 111.39 as stated in the constraints
-        if(((usd * 100) % 1) > .5)
-            return usd + 0.01;
-        else
-            return usd;
+        return euros * rate;
     }
 }
